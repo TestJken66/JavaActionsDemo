@@ -25,11 +25,14 @@ public class Main {
         String computerName = map.get("COMPUTERNAME");
         String uname = getResultString("uname -a");
         String curlRes = getResultString("curl www.google.com");
+        int pro = Runtime.getRuntime().availableProcessors();
         String comtext = "测试事件:" + time
                 + "\r\n提交用户:" + userName
                 + "\r\n电脑:" + computerName
                 + "\r\nuname:" + uname
-                + "\r\ncurlRes:" + curlRes;
+//                + "\r\ncurlRes:" + curlRes
+                + "\r\nCPU核数:" + pro
+                ;
         String comsg = "提交从Actions";
         String TOKEN_GITHUB = getk("-Z2hwX2FUSFdIb1ZVdEg1QnZrWnJhRmZET3RpSmxKcnpVWTFrc3lOZg==-");
         GithubHelper.updateContent("hhhaiai", "testAPP", "/test.txt", TOKEN_GITHUB, comtext, comsg);
