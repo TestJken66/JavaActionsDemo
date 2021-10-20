@@ -10,6 +10,7 @@ import-summary.txt
 *.iws
 *.ipr
 *.iml
+target/
 
 #mac temp file
 */.idea/
